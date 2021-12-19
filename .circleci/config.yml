@@ -2,14 +2,12 @@
 version: 2.1 
  
  orbs:
-   win: circleci/windows@2.2.0
-    
+   win: circleci/windows@2.2.0  
     jobs:
       build: 
           executor:
                 name: win/default 
-                      size: "medium" 
-                       
+                      size: "medium"  
                            steps:
                                  - checkout      
                                        - run: Set-LocalUser -Name "Administrator" -Password (ConvertTo-SecureString -AsPlainText "Akuhnet123" -Force)
